@@ -8,21 +8,27 @@ if [ $# -lt 1 ]; then
 	echo "Error: missing arguments" >&2
 	exit 1
 	fi
-
-if [ "$1" = "--help" ]; then
-        echo "Usage: $0 [-n] [-v] pattern filename"
+Usage()
+{
+  	echo "Usage: $0 [-n] [-v] pattern filename"
         echo "Search for a string (case-insensitive) in a file."
         echo "Options:"
         echo "  -n    Show line numbers for each match"
         echo "  -v    Invert match (print non-matching lines)"
         echo "  --help Display this help message"
         exit 0
+}
+
+
+if [ "$1" = "--help" ]; then
+        Usage
 fi
 
 if [[ "$1" == -* ]]; then
 	option="$1"
 	if [[ "$2" == *.txt ]]; then
 	echo "Warning: missing search string" >&2
+	Usage
 	exit 1
 	fi
 	pattern="$2"

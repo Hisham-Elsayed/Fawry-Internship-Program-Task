@@ -60,7 +60,9 @@ Command:
 Output:
 ```
 2:This is a test
-4:another test line
+3:another test line
+5:Don't match this line
+6:Testing one two three
 ```
 (Shows all lines that do not contain "hello", along with their line numbers.)
 
