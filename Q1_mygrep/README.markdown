@@ -83,10 +83,3 @@ If regex support or additional options like `-i`, `-c`, or `-l` were to be added
 ## Challenges
 The hardest part was error handling. Managing missing strings and missing arguments was tricky because the order of `if` conditions matters a lot, and Bash syntax is still new. Debugging the flow when a pattern or filename was missing took time to get right without conflicting checks.
 
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-Your Name - your.email@example.com
-
-Project Link: [<your-repo-link>](<your-repo-link>)
